@@ -24,4 +24,4 @@
 
 ## Links
 
-- Live Site URL: [Stock Photos](https://news-website-ekizashvilit.netlify.app/)
+- Live Site URL: [Stock Photos](https://reliable-dango-e3cec9.netlify.app/)
