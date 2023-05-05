@@ -1,11 +1,14 @@
 import axios from 'axios';
+import { useGlobalContext } from './context';
 
 const SearchForm = () => {
+  const { setSearchTerm } = useGlobalContext();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const searchValue = e.target.elements.search.value;
     if (!searchValue) return;
-    console.log(searchValue);
+    setSearchTerm(searchValue);
   };
 
   return (
@@ -16,7 +19,7 @@ const SearchForm = () => {
           type="text"
           className="form-input search-input"
           name="search"
-          placeholder="cat"
+          placeholder="cyberpunk"
         />
         <button type="submit" className="btn">
           search
