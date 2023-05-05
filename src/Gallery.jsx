@@ -17,8 +17,6 @@ const Gallery = () => {
     },
   });
 
-  console.log(response);
-
   if (response.isLoading) {
     return (
       <section className="image-container">
