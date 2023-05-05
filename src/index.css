@@ -77,6 +77,8 @@ html {
 }
 
 .dark-theme {
+  --textColor: var(--dark-mode-text-color);
+  --backgroundColor: var(--dark-mode-bg-color);
 }
 
 body {
