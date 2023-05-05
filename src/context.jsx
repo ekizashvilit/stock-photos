@@ -5,6 +5,7 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('cyberpunk');
 
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
@@ -13,24 +14,10 @@ export const AppProvider = ({ children }) => {
     body.classList.toggle('dark-theme', newDarkTheme);
   };
 
-  // API KEY -  B_G1ZmyL1gpRNAGR4zXluVxDXli8QorJh20YqDaFcUE
-
-  // const accessKey = 'B_G1ZmyL1gpRNAGR4zXluVxDXli8QorJh20YqDaFcUE';
-  // const searchTerm = 'cat';
-
-  // axios
-  //   .get(
-  //     `https://api.unsplash.com/search/photos?query=${searchTerm}&client_id=${accessKey}`
-  //   )
-  //   .then((response) => {
-  //     console.log(response.data);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
-
   return (
-    <AppContext.Provider value={{ isDarkTheme, toggleDarkTheme }}>
+    <AppContext.Provider
+      value={{ isDarkTheme, toggleDarkTheme, searchTerm, setSearchTerm }}
+    >
       {children}
     </AppContext.Provider>
   );
