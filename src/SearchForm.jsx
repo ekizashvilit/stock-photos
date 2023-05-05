@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useGlobalContext } from './context';
 
 const SearchForm = () => {
@@ -13,7 +12,7 @@ const SearchForm = () => {
 
   return (
     <section>
-      <h1 className="title">unsplash images</h1>
+      <h1 className="title">stock images</h1>
       <form className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
